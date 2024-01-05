@@ -12,8 +12,10 @@
 	<Notes/>
 	<ExposeForReuse>false</ExposeForReuse>
 	<IsAbstract>false</IsAbstract>
+	<IsEisNativeEntity>false</IsEisNativeEntity>
 	<IsExternallyManaged>false</IsExternallyManaged>
 	<IsSingleton>false</IsSingleton>
+	<RepositoryConnectionId></RepositoryConnectionId>
 	<TableName></TableName>
 	<BuildingBlocks>
 		<uri
@@ -573,7 +575,7 @@
 		</IdentityBuildingBlock>
 		<InboxTaskBuildingBlock
 			type="com.cordys.entity.buildingblocks.inboxtask.InboxTaskBuildingBlock"
-			typeVersion="F3A963B1-C20D-47AF-BE05-E4B36D0EC3B4"
+			typeVersion="D646C9D1-F5CF-4407-BF9E-7F42B1C9158F"
 			RuntimeDocumentID="90B11C8A-3947-11E5-F7F0-5406E6CE7FCB">
 			<DocumentID>005056A5-1B45-A1EB-B418-A2B65F7F6324</DocumentID>
 			<Name>Task</Name>
@@ -761,6 +763,16 @@
 					<Description>Properties</Description>
 					<CreatedBy>Henry.Chiu@dmhc.ca.gov</CreatedBy>
 					<CreationDate>2021-06-18T18:30:33.195</CreationDate>
+					<Notes/>
+				</InboxStaticAction>
+				<InboxStaticAction
+					type="com.cordys.entity.buildingblocks.inboxtask.InboxStaticAction"
+					RuntimeDocumentID="E73A5E6AAE7241C7B42F04FD94EC80AC">
+					<DocumentID>EEF7EA45-761B-34BF-8939-34CE6A3C99CA</DocumentID>
+					<Name>Acknowledge</Name>
+					<Description>Acknowledge</Description>
+					<CreatedBy>ouathuser1@AWP</CreatedBy>
+					<CreationDate>2024-01-05T06:30:18.963</CreationDate>
 					<Notes/>
 				</InboxStaticAction>
 			</OwnedActions>
@@ -2401,7 +2413,7 @@
 					<CreationDate>2021-06-18T18:30:33.226</CreationDate>
 					<Notes/>
 					<ConflictLevel>None</ConflictLevel>
-					<DataType>Decimal</DataType>
+					<DataType>IntegerValueList</DataType>
 					<ExposeForReuse>false</ExposeForReuse>
 					<Expression></Expression>
 					<IsComputedProperty>false</IsComputedProperty>
@@ -2435,30 +2447,154 @@
 						</TranslatableText>
 					</DisplayName>
 					<OwnedTypeDefinition>
-						<DecimalPropertyDefinition
-							type="com.cordys.entity.core.typesystem.primitives.number.DecimalPropertyDefinition"
-							typeVersion="4189E3FD-7E68-423A-8289-FEFAD1EC0ED8"
-							RuntimeDocumentID="005056A5-1B45-A1EB-B418-A2B65FC0A324">
-							<DocumentID>005056A5-1B45-A1EB-B418-A2B65FC06324</DocumentID>
-							<Name>005056A5-1B45-A1EB-B418-A2B65FC06324</Name>
-							<Description>005056A5-1B45-A1EB-B418-A2B65FC06324</Description>
-							<CreatedBy>Henry.Chiu@dmhc.ca.gov</CreatedBy>
-							<CreationDate>2021-06-18T18:30:33.195</CreationDate>
+						<IntegerEnumPropertyDefinition
+							type="com.cordys.entity.core.typesystem.primitives.staticEnum.IntegerEnumPropertyDefinition"
+							typeVersion="005056C0-0008-11E6-ECD4-9ED50A5ADB27 4189E3FD-7E68-423A-8289-FEFAD1EC0ED8"
+							RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141FB49E2">
+							<DocumentID>BC1D9339-C9FB-317E-8579-ACE94CCE7E4E</DocumentID>
+							<Name>BC1D9339-C9FB-317E-8579-ACE94CCE7E4E</Name>
+							<Description/>
+							<CreatedBy>ouathuser1@AWP</CreatedBy>
+							<CreationDate>2024-01-05T06:30:31.924</CreationDate>
 							<Notes/>
 							<DefaultValue></DefaultValue>
-							<DigitsLeftOfDecimal>18</DigitsLeftOfDecimal>
-							<DigitsRightOfDecimal>0</DigitsRightOfDecimal>
-							<Max></Max>
-							<Min></Min>
+							<IsEnumerationSorted>false</IsEnumerationSorted>
 							<lowerBound>1</lowerBound>
 							<upperBound>1</upperBound>
+							<DefaultEnum/>
+							<Enums/>
 							<Type/>
-						</DecimalPropertyDefinition>
+							<ValuesDefinition>
+								<StaticIntegerEnumSet
+									type="com.cordys.entity.core.typesystem.primitives.staticEnum.StaticIntegerEnumSet"
+									RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141FB89E2">
+									<DocumentID>83B1E28E-C72F-39EC-A25D-AF6161DE629B</DocumentID>
+									<Name>83B1E28E-C72F-39EC-A25D-AF6161DE629B</Name>
+									<Description/>
+									<CreatedBy>ouathuser1@AWP</CreatedBy>
+									<CreationDate>2024-01-05T06:30:13.242</CreationDate>
+									<Notes/>
+									<DefaultEnum/>
+									<Enums>
+										<StaticIntegerEnum
+											type="com.cordys.entity.core.typesystem.primitives.staticEnum.StaticIntegerEnum"
+											typeVersion="005056C0-0008-11E6-ECD4-A00528D1BB27"
+											RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141FBC9E2">
+											<DocumentID>98E1A193-7B76-345B-AEFA-1E165C090258</DocumentID>
+											<Name>98E1A193-7B76-345B-AEFA-1E165C090258</Name>
+											<Description/>
+											<CreatedBy>ouathuser1@AWP</CreatedBy>
+											<CreationDate>2024-01-05T06:30:13.174</CreationDate>
+											<Notes/>
+											<IsNullEntry>false</IsNullEntry>
+											<Value>1</Value>
+											<Icon/>
+											<PropertyDefinition/>
+											<StaticEnumSet>
+												<uri
+													id="83B1E28E-C72F-39EC-A25D-AF6161DE629B"
+												/>
+											</StaticEnumSet>
+											<ValueDisplayName>
+												<TranslatableText
+													type="com.cordys.translation.TranslatableText"
+													typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+													RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141FC09E2">
+													<DocumentID>CCFC1EEE-2173-33B9-B60F-5466C61EE47B</DocumentID>
+													<Name>CCFC1EEE-2173-33B9-B60F-5466C61EE47B</Name>
+													<Description/>
+													<CreatedBy>ouathuser1@AWP</CreatedBy>
+													<CreationDate>2024-01-05T06:30:18.986</CreationDate>
+													<Notes/>
+													<DeveloperText>Low</DeveloperText>
+													<Identifier/>
+												</TranslatableText>
+											</ValueDisplayName>
+										</StaticIntegerEnum>
+										<StaticIntegerEnum
+											type="com.cordys.entity.core.typesystem.primitives.staticEnum.StaticIntegerEnum"
+											typeVersion="005056C0-0008-11E6-ECD4-A00528D1BB27"
+											RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141FC49E2">
+											<DocumentID>5E523EF4-11BD-3F33-B3DD-14396067A082</DocumentID>
+											<Name>5E523EF4-11BD-3F33-B3DD-14396067A082</Name>
+											<Description/>
+											<CreatedBy>ouathuser1@AWP</CreatedBy>
+											<CreationDate>2024-01-05T06:30:28.583</CreationDate>
+											<Notes/>
+											<IsNullEntry>false</IsNullEntry>
+											<Value>5</Value>
+											<Icon/>
+											<PropertyDefinition/>
+											<StaticEnumSet>
+												<uri
+													id="83B1E28E-C72F-39EC-A25D-AF6161DE629B"
+												/>
+											</StaticEnumSet>
+											<ValueDisplayName>
+												<TranslatableText
+													type="com.cordys.translation.TranslatableText"
+													typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+													RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141FC89E2">
+													<DocumentID>B7B592DA-C5F2-386D-BBA4-B935933FD0E8</DocumentID>
+													<Name>B7B592DA-C5F2-386D-BBA4-B935933FD0E8</Name>
+													<Description/>
+													<CreatedBy>ouathuser1@AWP</CreatedBy>
+													<CreationDate>2024-01-05T06:30:13.248</CreationDate>
+													<Notes/>
+													<DeveloperText>High</DeveloperText>
+													<Identifier/>
+												</TranslatableText>
+											</ValueDisplayName>
+										</StaticIntegerEnum>
+										<StaticIntegerEnum
+											type="com.cordys.entity.core.typesystem.primitives.staticEnum.StaticIntegerEnum"
+											typeVersion="005056C0-0008-11E6-ECD4-A00528D1BB27"
+											RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141FCC9E2">
+											<DocumentID>98330EED-F799-3AA4-8569-FA7D298DC288</DocumentID>
+											<Name>98330EED-F799-3AA4-8569-FA7D298DC288</Name>
+											<Description/>
+											<CreatedBy>ouathuser1@AWP</CreatedBy>
+											<CreationDate>2024-01-05T06:30:32.934</CreationDate>
+											<Notes/>
+											<IsNullEntry>false</IsNullEntry>
+											<Value>3</Value>
+											<Icon/>
+											<PropertyDefinition/>
+											<StaticEnumSet>
+												<uri
+													id="83B1E28E-C72F-39EC-A25D-AF6161DE629B"
+												/>
+											</StaticEnumSet>
+											<ValueDisplayName>
+												<TranslatableText
+													type="com.cordys.translation.TranslatableText"
+													typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+													RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141FD09E2">
+													<DocumentID>0E84CF02-1D53-38B9-8B81-EAB88362C8C4</DocumentID>
+													<Name>0E84CF02-1D53-38B9-8B81-EAB88362C8C4</Name>
+													<Description/>
+													<CreatedBy>ouathuser1@AWP</CreatedBy>
+													<CreationDate>2024-01-05T06:30:33.913</CreationDate>
+													<Notes/>
+													<DeveloperText>Normal</DeveloperText>
+													<Identifier/>
+												</TranslatableText>
+											</ValueDisplayName>
+										</StaticIntegerEnum>
+									</Enums>
+									<PropertyDefinition>
+										<uri
+											id="BC1D9339-C9FB-317E-8579-ACE94CCE7E4E"
+										/>
+									</PropertyDefinition>
+								</StaticIntegerEnumSet>
+							</ValuesDefinition>
+						</IntegerEnumPropertyDefinition>
 					</OwnedTypeDefinition>
 					<Tooltip/>
 					<TypeDefinition>
 						<uri
-							id="005056A5-1B45-A1EB-B418-A2B65FC06324"
+							id="BC1D9339-C9FB-317E-8579-ACE94CCE7E4E"
 						/>
 					</TypeDefinition>
 				</Property>
@@ -4444,6 +4580,199 @@
 					<TypeDefinition>
 						<uri
 							id="005056A5-1B45-A1EB-B418-A2B65FF8E324"
+						/>
+					</TypeDefinition>
+				</Property>
+				<Property
+					type="com.cordys.entity.core.structure.property.Property"
+					RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141F849E2">
+					<DocumentID>28DFEB6B-98A5-A1EE-AAE4-E17141F809E2</DocumentID>
+					<Name>AcknowledgeStatus</Name>
+					<Description>ACKNOWLEDGE_STATUS</Description>
+					<CreatedBy>ouathuser1@AWP</CreatedBy>
+					<CreationDate>2024-01-05T06:30:31.891</CreationDate>
+					<Notes/>
+					<ConflictLevel>None</ConflictLevel>
+					<DataType>IntegerValueList</DataType>
+					<ExposeForReuse>false</ExposeForReuse>
+					<Expression></Expression>
+					<IsComputedProperty>false</IsComputedProperty>
+					<IsReadOnly>true</IsReadOnly>
+					<IsRequired>false</IsRequired>
+					<IsValueUnique>false</IsValueUnique>
+					<StaticProperty>23192ED07CE24D239041B67F2285A97B</StaticProperty>
+					<Updatability>ReadOnly</Updatability>
+					<BuildingBlock>
+						<uri
+							id="005056A5-1B45-A1EB-B418-A2B65F7F6324"
+						/>
+					</BuildingBlock>
+					<DisplayName/>
+					<OwnedTypeDefinition>
+						<IntegerEnumPropertyDefinition
+							type="com.cordys.entity.core.typesystem.primitives.staticEnum.IntegerEnumPropertyDefinition"
+							typeVersion="005056C0-0008-11E6-ECD4-9ED50A5ADB27 4189E3FD-7E68-423A-8289-FEFAD1EC0ED8"
+							RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141F889E2">
+							<DocumentID>61BC1EC0-8F5E-363F-90E8-10867B485587</DocumentID>
+							<Name>61BC1EC0-8F5E-363F-90E8-10867B485587</Name>
+							<Description/>
+							<CreatedBy>ouathuser1@AWP</CreatedBy>
+							<CreationDate>2024-01-05T06:30:22.692</CreationDate>
+							<Notes/>
+							<DefaultValue></DefaultValue>
+							<IsEnumerationSorted>false</IsEnumerationSorted>
+							<lowerBound>1</lowerBound>
+							<upperBound>1</upperBound>
+							<DefaultEnum/>
+							<Enums/>
+							<Type/>
+							<ValuesDefinition>
+								<StaticIntegerEnumSet
+									type="com.cordys.entity.core.typesystem.primitives.staticEnum.StaticIntegerEnumSet"
+									RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141F8C9E2">
+									<DocumentID>7967281D-9328-3EDB-A54A-2E21784916D3</DocumentID>
+									<Name>7967281D-9328-3EDB-A54A-2E21784916D3</Name>
+									<Description/>
+									<CreatedBy>ouathuser1@AWP</CreatedBy>
+									<CreationDate>2024-01-05T06:30:18.974</CreationDate>
+									<Notes/>
+									<DefaultEnum/>
+									<Enums>
+										<StaticIntegerEnum
+											type="com.cordys.entity.core.typesystem.primitives.staticEnum.StaticIntegerEnum"
+											typeVersion="005056C0-0008-11E6-ECD4-A00528D1BB27"
+											RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141F909E2">
+											<DocumentID>54398BF1-41EC-305E-899A-0D9B6FB8BFDE</DocumentID>
+											<Name>54398BF1-41EC-305E-899A-0D9B6FB8BFDE</Name>
+											<Description/>
+											<CreatedBy>ouathuser1@AWP</CreatedBy>
+											<CreationDate>2024-01-05T06:30:32.937</CreationDate>
+											<Notes/>
+											<IsNullEntry>false</IsNullEntry>
+											<Value>1</Value>
+											<Icon/>
+											<PropertyDefinition/>
+											<StaticEnumSet>
+												<uri
+													id="7967281D-9328-3EDB-A54A-2E21784916D3"
+												/>
+											</StaticEnumSet>
+											<ValueDisplayName>
+												<TranslatableText
+													type="com.cordys.translation.TranslatableText"
+													typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+													RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141F949E2">
+													<DocumentID>7CD5F3BA-F69A-3344-B0AF-9792BC1578EE</DocumentID>
+													<Name>7CD5F3BA-F69A-3344-B0AF-9792BC1578EE</Name>
+													<Description/>
+													<CreatedBy>ouathuser1@AWP</CreatedBy>
+													<CreationDate>2024-01-05T06:30:15.329</CreationDate>
+													<Notes/>
+													<DeveloperText>Pending</DeveloperText>
+													<Identifier/>
+												</TranslatableText>
+											</ValueDisplayName>
+										</StaticIntegerEnum>
+										<StaticIntegerEnum
+											type="com.cordys.entity.core.typesystem.primitives.staticEnum.StaticIntegerEnum"
+											typeVersion="005056C0-0008-11E6-ECD4-A00528D1BB27"
+											RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141F989E2">
+											<DocumentID>7A53C2AA-604D-301B-BBE8-10A4A782A04F</DocumentID>
+											<Name>7A53C2AA-604D-301B-BBE8-10A4A782A04F</Name>
+											<Description/>
+											<CreatedBy>ouathuser1@AWP</CreatedBy>
+											<CreationDate>2024-01-05T06:30:09.388</CreationDate>
+											<Notes/>
+											<IsNullEntry>false</IsNullEntry>
+											<Value>2</Value>
+											<Icon/>
+											<PropertyDefinition/>
+											<StaticEnumSet>
+												<uri
+													id="7967281D-9328-3EDB-A54A-2E21784916D3"
+												/>
+											</StaticEnumSet>
+											<ValueDisplayName>
+												<TranslatableText
+													type="com.cordys.translation.TranslatableText"
+													typeVersion="FC58ED95-5D9A-4D1D-9A84-8D03E2528B67"
+													RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141F9C9E2">
+													<DocumentID>218BE115-AAA9-38A8-AE91-A676E78ED169</DocumentID>
+													<Name>218BE115-AAA9-38A8-AE91-A676E78ED169</Name>
+													<Description/>
+													<CreatedBy>ouathuser1@AWP</CreatedBy>
+													<CreationDate>2024-01-05T06:30:22.627</CreationDate>
+													<Notes/>
+													<DeveloperText>Completed</DeveloperText>
+													<Identifier/>
+												</TranslatableText>
+											</ValueDisplayName>
+										</StaticIntegerEnum>
+									</Enums>
+									<PropertyDefinition>
+										<uri
+											id="61BC1EC0-8F5E-363F-90E8-10867B485587"
+										/>
+									</PropertyDefinition>
+								</StaticIntegerEnumSet>
+							</ValuesDefinition>
+						</IntegerEnumPropertyDefinition>
+					</OwnedTypeDefinition>
+					<Tooltip/>
+					<TypeDefinition>
+						<uri
+							id="61BC1EC0-8F5E-363F-90E8-10867B485587"
+						/>
+					</TypeDefinition>
+				</Property>
+				<Property
+					type="com.cordys.entity.core.structure.property.Property"
+					RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141FA89E2">
+					<DocumentID>28DFEB6B-98A5-A1EE-AAE4-E17141FA49E2</DocumentID>
+					<Name>IsPrivateTask</Name>
+					<Description>IsPrivateTask</Description>
+					<CreatedBy>ouathuser1@AWP</CreatedBy>
+					<CreationDate>2024-01-05T06:30:22.671</CreationDate>
+					<Notes/>
+					<ConflictLevel>None</ConflictLevel>
+					<DataType>Integer</DataType>
+					<ExposeForReuse>false</ExposeForReuse>
+					<Expression></Expression>
+					<IsComputedProperty>false</IsComputedProperty>
+					<IsReadOnly>true</IsReadOnly>
+					<IsRequired>false</IsRequired>
+					<IsValueUnique>false</IsValueUnique>
+					<StaticProperty>540099A5DFAF440E94C2D60313ED04DB</StaticProperty>
+					<Updatability>ReadOnly</Updatability>
+					<BuildingBlock>
+						<uri
+							id="005056A5-1B45-A1EB-B418-A2B65F7F6324"
+						/>
+					</BuildingBlock>
+					<DisplayName/>
+					<OwnedTypeDefinition>
+						<IntegerPropertyDefinition
+							type="com.cordys.entity.core.typesystem.primitives.number.IntegerPropertyDefinition"
+							typeVersion="4189E3FD-7E68-423A-8289-FEFAD1EC0ED8"
+							RuntimeDocumentID="28DFEB6B-98A5-A1EE-AAE4-E17141FB09E2">
+							<DocumentID>28DFEB6B-98A5-A1EE-AAE4-E17141FAC9E2</DocumentID>
+							<Name>28DFEB6B-98A5-A1EE-AAE4-E17141FAC9E2</Name>
+							<Description/>
+							<CreatedBy>ouathuser1@AWP</CreatedBy>
+							<CreationDate>2024-01-05T06:30:24.588</CreationDate>
+							<Notes/>
+							<DefaultValue></DefaultValue>
+							<Max></Max>
+							<Min></Min>
+							<lowerBound>1</lowerBound>
+							<upperBound>1</upperBound>
+							<Type/>
+						</IntegerPropertyDefinition>
+					</OwnedTypeDefinition>
+					<Tooltip/>
+					<TypeDefinition>
+						<uri
+							id="28DFEB6B-98A5-A1EE-AAE4-E17141FAC9E2"
 						/>
 					</TypeDefinition>
 				</Property>
